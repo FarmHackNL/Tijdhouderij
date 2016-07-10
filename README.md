@@ -1,6 +1,7 @@
 # Tijdhouderij
 VIC-Sterksel: app for keeping time without user interaction, using proximity beacons.
 
+![Tijdhouderij](https://raw.githubusercontent.com/FarmHackNL/Tijdhouderij/master/logo.png "Tijdhouderij")
 ## Prepare environment
 `npm install -g cordova ionic bower gulp-cli`
 
