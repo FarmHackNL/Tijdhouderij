@@ -1,0 +1,10 @@
+<ion-view view-title="Historie">
+  <ion-content class="padding">
+  	<h2>Historie</h2>
+  	Hier kunt u uw tijdsbestedingsanalyses inzien die in het verleden zijn vastgelegd.
+  	<button class="button button-block button-positive" ng-click="datePickerClicked()">{{datePickerObject.inputDate | date:"d MMMM 'yy"}}</button>
+  	<ion-list>
+  		<ion-item class="item-text-wrap" ng-repeat="text in mockItems">{{text}}</ion-item>
+  	</ion-list>
+  </ion-content>
+</ion-view>

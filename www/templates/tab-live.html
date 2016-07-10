@@ -1,0 +1,14 @@
+<ion-view view-title="Live">
+  <ion-content class="padding">
+    <h2>Huidige activiteit</h2>
+    <ion-list>
+      <ion-item ng-click="refresh()">{{beacons.length > 0 ? beaconMap[beacons[0].address] : "Bezig met scannen..."}}</ion-item>
+    </ion-list>
+    <h2 ng-show="beacons.length > 1">Activiteiten in de buurt</h2>
+    <ion-list>
+      <ion-item class="item-text-wrap" ng-repeat="beacon in beacons.slice(1)">
+        {{beaconMap[beacon.address]}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

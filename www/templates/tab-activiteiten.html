@@ -1,0 +1,13 @@
+<ion-view view-title="Activiteiten">
+  <ion-content class="padding">
+    <h2>Activiteiten</h2>
+    <img src="img/pig.jpg" class="width-100p rounded-corners">
+    Hier kunt u de activiteiten vinden die u gedefiniëerd heeft.
+    <ion-list>
+	    <ion-item class="item-text-wrap" ng-repeat="(key, value) in beaconMap track by $index" ng-click="mappingClicked(key)">
+	    	<b>{{value}}</b> gekoppeld aan beacon {{key.substr(-5).replace(":", "")}}
+	    </ion-item>
+    </ion-list>
+    <button class="button button-block button-balanced" ng-click="newActivityClicked()">Nieuwe activiteit koppelen</ion-button>
+  </ion-content>
+</ion-view>

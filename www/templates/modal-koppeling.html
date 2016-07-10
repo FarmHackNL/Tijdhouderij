@@ -1,0 +1,31 @@
+<ion-modal-view>
+	<ion-header-bar>
+	  <h1 class="title">Activiteitkoppeling</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="padding">
+			Hier kunt u een activiteit aan een beacon koppelen. Wanneer u in de buurt komt van de beacon, zal de app dit registreren en bijhouden hoelang u ermee bezig bent.
+		</div>
+	  <ion-list>
+	  	<ion-item class="item-input">
+			<div class="input-label">
+				Activiteit-naam
+			</div>
+	  		<input type="text" placeholder="Activiteitnaam" ng-model="modifyActivityName">
+	  	</ion-item>
+	  	<ion-item class="item-input item-select">
+			<div class="input-label">
+				Beacon
+			</div>
+	  		<select>
+	  			<option ng-repeat="(key, value) in beaconMap track by $index" value="{{value}}">
+	  				Beacon {{key.substr(-5).replace(":", "")}}
+	  			</option>
+	  		</select>
+	  	</ion-item>
+	  </ion-list>
+	  <div class="padding">
+	  	<button class="button button-block button-balanced" ng-click="modal.hide()">Opslaan</button>
+	  </div>
+	</ion-content>
+</ion-modal-view>
